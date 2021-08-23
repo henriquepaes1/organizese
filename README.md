@@ -4,7 +4,7 @@ Organize.se stands for **organize yourself** in English.
 #### Description:
 A simple web app that helps you organize your tasks in a clean interface. You have the hability to add new tasks, conclude and delete existing tasks easily. Stay tuned to see new coming features
 like timestamps and performance graphs.
-#### Video Demo: https://youtu.be/8ZLjxwTzk5E
+#### See how organize.se works here: https://youtu.be/8ZLjxwTzk5E
 
 ## How was it built?
 Organize.se was built using Flask, Python, HTML, CSS and SQL. All skills provided by CS50 :)
