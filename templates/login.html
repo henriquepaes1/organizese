@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title%}
+- Login 
+{% endblock %}
+    
+{%block main%}
+    <h1>Log In!</h1>
+    <form action="/login" method='post'>
+        <div class='form-group'>
+            <label for='username'> Username </label>
+            <input name='username' type='text' autocomplete=off placeholder="Type your new username">
+        </div>
+        <div class='form-group'>
+            <label for='password'> Password </label>
+            <input name='password' type='password' autocomplete=off placeholder="Type your new password">
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Login!</button>  
+    </form>
+{% endblock %}
+    

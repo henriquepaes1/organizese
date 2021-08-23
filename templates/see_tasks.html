@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{%block title%}
+{%endblock%}
+
+{%block main%}
+<h1>Your tasks</h1>
+
+<table class="table table-bordless">
+    <thead>
+        <tr>
+            <th>Task description</th> 
+        </tr>
+    </thead>
+        {%for i in descs%}
+        <tr>
+            <td>{{i[2]}}</td>
+            <td>
+            <form method='POST'>
+            <input type='hidden' name='task_id' value="{{i[0]}}">
+            <button class="btn btn-success btn-sm" type="submit" title='Conclude task' name='submit_button' value="conclude">
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <button class="btn btn-danger btn-sm" type="submit" name='submit_button' title='Delete task' value="delete">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+            </form>  
+            </td>
+        </tr>
+        {%endfor%}
+</table>  
+
+<form method='POST'>
+    <button type="submit" name="submit_button" value='add' class="btn btn-outline-primary btn-md btn-block" title="create task">Create a new task!</button> 
+</form>
+
+{% endblock %}
+

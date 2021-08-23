@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{%block title%}
+{%endblock%}
+
+{%block main%}
+<h1>Concluded Tasks</h1>
+
+<table class="table table-bordless">
+<thead>
+    <tr>
+        <th>Here you can have a look at the tasks you concluded</th>
+    </tr>
+</thead>
+
+    {%for i in descs%}
+    <tr>
+        <td>{{i[2]}}</td>
+    </tr>
+    {%endfor%}
+</table>
+
+
+
+<form method='POST'>
+    <button type="submit" name="submit_button" value='add' class="btn btn-outline-primary btn-md btn-block" title="create task">Create a new task!</button> 
+</form>
+
+{% endblock %}
+
