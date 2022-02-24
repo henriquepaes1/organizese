@@ -121,7 +121,7 @@ def see_tasks():
             task = request.form['task_id'] # task to be dropped
             print(task)
             cursor_task.execute("DELETE FROM tasks WHERE task_id =? AND user_id=?", (task, session['user_id']))
-            sql_desc = cursor_task.execute("SELECT * FROM tasks WHERE user_id=?", (session['user_id'],))
+            sql_desc = cursor_task.execute("SELECT * FROM tasks WHERE user_id=?", (session['user_id'],)) # acess updated tasks to load page
             descs = sql_desc.fetchall()  # retorna tuplas 
             df.commit()
             return render_template('see_tasks.html', descs=descs)
